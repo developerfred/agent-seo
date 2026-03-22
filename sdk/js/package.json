@@ -1,0 +1,46 @@
+{
+  "name": "@agentseo/sdk",
+  "version": "1.0.0",
+  "description": "AgentSEO JavaScript/TypeScript SDK - SEO for the Agentic Era",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "eslint src/",
+    "test": "vitest"
+  },
+  "keywords": [
+    "seo",
+    "agentic-seo",
+    "ai-seo",
+    "structured-data",
+    "schema-org",
+    "gpt",
+    "claude",
+    "sdk"
+  ],
+  "author": "AIPOP Fun LTD",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  },
+  "dependencies": {
+    "undici": "^6.3.0"
+  }
+}

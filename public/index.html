@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>AgentSEO - SEO for the Agentic Era | AI Agent Content Optimization</title>
+    <meta name="title" content="AgentSEO - SEO for the Agentic Era | AI Agent Content Optimization">
+    <meta name="description" content="The first SEO platform designed for the agentic era. Optimize your content for AI agents like GPT, Claude, and others. Structured data, entity extraction, and AI readiness scoring.">
+    <meta name="keywords" content="Agentic SEO, AI SEO, SEO for AI agents, AI content optimization, structured data, schema.org, JSON-LD, AI crawler optimization, GPT SEO, Claude SEO">
+    <meta name="author" content="AIPOP Fun LTD">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://agentseo.tech/">
+    <meta property="og:title" content="AgentSEO - SEO for the Agentic Era">
+    <meta property="og:description" content="The first SEO platform designed for the agentic era. Optimize content for AI agents like GPT, Claude, and others.">
+    <meta property="og:image" content="https://agentseo.tech/og-image.png">
+    <meta property="og:site_name" content="AgentSEO">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://agentseo.tech/">
+    <meta property="twitter:title" content="AgentSEO - SEO for the Agentic Era">
+    <meta property="twitter:description" content="The first SEO platform designed for the agentic era. Optimize content for AI agents.">
+    <meta property="twitter:image" content="https://agentseo.tech/og-image.png">
+    <meta property="twitter:creator" content="@AgentSEO_">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://agentseo.tech/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "AgentSEO",
+        "description": "SEO platform for the agentic era - optimize content for AI agents",
+        "url": "https://agentseo.tech",
+        "applicationCategory": "WebApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Free tier available"
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "AIPOP Fun LTD",
+            "url": "https://aipop.fun",
+            "sameAs": [
+                "https://twitter.com/AgentSEO_",
+                "https://github.com/developerfred/agent-seo"
+            ]
+        },
+        "featureList": [
+            "AI readiness scoring",
+            "Schema.org validation",
+            "Entity extraction",
+            "JSON-LD analysis",
+            "GPTBot compatibility",
+            "Claude indexable check"
+        ],
+        "screenshot": "https://agentseo.tech/screenshot.png",
+        "softwareVersion": "1.0.0"
+    }
+    </script>
+    
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AgentSEO",
+        "description": "SEO optimization tool for AI agents",
+        "url": "https://agentseo.tech",
+        "operatingSystem": "Web",
+        "applicationCategory": "DeveloperApplication",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "89"
+        }
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Agentic SEO?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Agentic SEO is SEO optimized for AI agents rather than traditional search engines. It focuses on structured data, entity definitions, and machine-readable content that AI agents can understand and use."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is AgentSEO different from traditional SEO?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Traditional SEO optimizes for Google/Bing. AgentSEO optimizes for AI agents like GPT, Claude, and other AI systems that consume web content directly."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What AI agents does AgentSEO support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AgentSEO checks compatibility with GPTBot, Claude-Web, and other major AI crawlers. We analyze how well your content is understood by AI systems."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #10b981;
+            --background: #0f172a;
+            --surface: #1e293b;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--text);
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--text-muted);
+            color: var(--text);
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--text);
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--primary);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            background: linear-gradient(to right, var(--text), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+        
+        .hero-buttons .btn {
+            padding: 14px 28px;
+            font-size: 16px;
+        }
+        
+        /* Analyzer Form */
+        .analyzer-section {
+            background: var(--surface);
+            padding: 60px 0;
+            margin-top: -40px;
+        }
+        
+        .analyzer-card {
+            background: var(--background);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .analyzer-card h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        .analyzer-card p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+        
+        .analyzer-form {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .analyzer-form input {
+            flex: 1;
+            padding: 14px 18px;
+            background: var(--surface);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 16px;
+        }
+        
+        .analyzer-form input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .analyzer-form .btn {
+            white-space: nowrap;
+        }
+        
+        /* Features Grid */
+        .features {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+        
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 18px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 32px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+        
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+        
+        /* Comparison Table */
+        .comparison {
+            padding: 100px 0;
+            background: var(--surface);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .comparison-table th {
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+        
+        .comparison-table td:first-child {
+            color: var(--text);
+        }
+        
+        .check {
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        
+        .cross {
+            color: #ef4444;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 100px 0;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        
+        .pricing-card {
+            background: var(--surface);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 40px;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--primary);
+            position: relative;
+        }
+        
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            padding: 4px 16px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .pricing-card h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .pricing-card .price {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+        
+        .pricing-card .price span {
+            font-size: 16px;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+        
+        .pricing-features li {
+            padding: 8px 0;
+            color: var(--text-muted);
+        }
+        
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--secondary);
+            margin-right: 8px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .footer-brand h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        
+        .footer-brand p {
+            color: var(--text-muted);
+        }
+        
+        .footer-links h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--text);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            
+            .features-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .analyzer-form {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="logo-icon">🔍</div>
+                    <span>AgentSEO</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="/docs">Documentation</a></li>
+                    <li><a href="#">API</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <button class="btn btn-outline">Sign In</button>
+                    <button class="btn btn-primary">Get Started</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <span class="hero-badge">🚀 v1.0 Released</span>
+                <h1>SEO for the<br>Agentic Era</h1>
+                <p>The first SEO platform designed for AI agents. Optimize your content for GPT, Claude, and the next generation of AI crawlers.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Start Free Trial</button>
+                    <button class="btn btn-outline">View Documentation</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analyzer -->
+        <section class="analyzer-section">
+            <div class="container">
+                <div class="analyzer-card">
+                    <h2>Analyze Your Website</h2>
+                    <p>Check how well your content is optimized for AI agents</p>
+                    <form class="analyzer-form" action="/analyze" method="GET">
+                        <input type="url" name="url" placeholder="Enter your website URL..." required>
+                        <button type="submit" class="btn btn-primary">Analyze</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Everything You Need for Agentic SEO</h2>
+                    <p>Comprehensive tools to optimize your content for AI agents</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>AI Readiness Score</h3>
+                        <p>Get a single score showing how well your content is understood by AI agents like GPT and Claude.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Schema.org Validation</h3>
+                        <p>Validate your structured data and ensure it follows best practices for AI consumption.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔗</div>
+                        <h3>Entity Extraction</h3>
+                        <p>See what entities AI agents extract from your content and how they connect them.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3>GPTBot Compatibility</h3>
+                        <p>Check if your content is accessible and understandable by OpenAI's crawler.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>AI Comprehension Score</h3>
+                        <p>Understand exactly what AI systems learn from your content.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">💡</div>
+                        <h3>Smart Recommendations</h3>
+                        <p>Get actionable suggestions to improve your AI visibility.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison -->
+        <section class="comparison">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Traditional vs Agentic SEO</h2>
+                    <p>What's different in the AI era?</p>
+                </div>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Traditional SEO</th>
+                            <th>Agentic SEO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Target</td>
+                            <td>Google, Bing crawlers</td>
+                            <td>AI agents (GPT, Claude, etc.)</td>
+                        </tr>
+                        <tr>
+                            <td>Focus</td>
+                            <td>Keywords, backlinks</td>
+                            <td>Entities, structured data</td>
+                        </tr>
+                        <tr>
+                            <td>Content Format</td>
+                            <td>Human-readable</td>
+                            <td>Machine-understandable</td>
+                        </tr>
+                        <tr>
+                            <td>Key Metrics</td>
+                            <td>PageRank, DA, PA</td>
+                            <td>Entity clarity, schema quality</td>
+                        </tr>
+                        <tr>
+                            <td>Discovery</td>
+                            <td>Search engine index</td>
+                            <td>AI training corpora</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Simple, Transparent Pricing</h2>
+                    <p>Start free, scale as you grow</p>
+                </div>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Free</h3>
+                        <div class="price">$0 <span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li>100 analyses/day</li>
+                            <li>Basic AI readiness check</li>
+                            <li>Schema validation</li>
+                            <li>Community support</li>
+                        </ul>
+                        <button class="btn btn-outline" style="width: 100%">Get Started</button>
+                    </div>
+                    
+                    <div class="pricing-card featured">
+                        <h3>Pro</h3>
+                        <div class="price">$29 <span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li>10,000 analyses/day</li>
+                            <li>Full AI analysis suite</li>
+                            <li>Entity extraction</li>
+                            <li>Competitor comparison</li>
+                            <li>Priority support</li>
+                        </ul>
+                        <button class="btn btn-primary" style="width: 100%">Start Trial</button>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <h3>Enterprise</h3>
+                        <div class="price">Custom</div>
+                        <ul class="pricing-features">
+                            <li>Unlimited analyses</li>
+                            <li>Custom integrations</li>
+                            <li>Dedicated support</li>
+                            <li>SLA guarantee</li>
+                            <li>On-premise option</li>
+                        </ul>
+                        <button class="btn btn-outline" style="width: 100%">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>AgentSEO</h3>
+                    <p>SEO for the Agentic Era.<br>Built by AIPOP Fun LTD.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="/docs">Documentation</a></li>
+                        <li><a href="/api">API</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/guides">Guides</a></li>
+                        <li><a href="/cases">Case Studies</a></li>
+                        <li><a href="/changelog">Changelog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="https://aipop.fun">AIPOP Fun</a></li>
+                        <li><a href="https://twitter.com/AgentSEO_">Twitter</a></li>
+                        <li><a href="https://github.com/developerfred/agent-seo">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); color: var(--text-muted);">
+                <p>© 2026 AgentSEO by AIPOP Fun LTD. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- FAQ JSON-LD for AI -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AgentSEO",
+        "url": "https://agentseo.tech",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://agentseo.tech/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+</body>
+</html>

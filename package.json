@@ -1,0 +1,33 @@
+{
+  "name": "agent-seo-api",
+  "version": "1.0.0",
+  "description": "AgentSEO API - SEO for the Agentic Era",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node src/index.js",
+    "start": "node src/index.js",
+    "analyze": "node src/cli.js analyze",
+    "ai-ready": "node src/cli.js ai-ready"
+  },
+  "keywords": [
+    "seo",
+    "agentic-seo",
+    "ai-seo",
+    "structured-data",
+    "schema-org",
+    "gpt",
+    "claude",
+    "ai-agents"
+  ],
+  "author": "AIPOP Fun LTD",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "node-fetch": "^3.3.2",
+    "cheerio": "^1.0.0-rc.12",
+    "schema-org-parser": "^1.0.0",
+    "dotenv": "^16.4.0"
+  }
+}
